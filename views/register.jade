@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h2 Registration Page
+    if errors
+     each msg, i in errors
+      .alert.alert-danger #{errors[i].msg}
+  #container.col
+    form(method='POST', action='/register', class='form-first')
+      .container
+        label
+          b Name
+        input(type='text', class="form-control", placeholder='Name', name='name', required='')
+        label
+          b Username
+        input(type='text', class="form-control", placeholder='Username', name='username', required='')
+        label
+          b Email
+        input(type='text', class="form-control", placeholder='Email', name='email', required='')
+        label
+          b Password
+        input(type='password', class="form-control", placeholder='Password', name='password', required='')
+        label
+          b Verify Password
+        input(type='password', class="form-control", placeholder='Confirm Password', name='password2', required='')
+        button.cancelbtn(type='button', class='', id='cl') Cancel
+        button(type='submit', class="btn btn-primary", id='register') Register
+      

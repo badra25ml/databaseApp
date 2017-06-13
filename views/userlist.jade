@@ -1,0 +1,10 @@
+extends layout
+
+block content
+ h2.
+    User List
+ ul  
+ each user, i in userlist
+      li
+        a(href)=user.username
+  
