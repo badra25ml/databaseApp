@@ -13,9 +13,7 @@ router.get('/home', ensureAuthenticated,function(req, res, next) {
 //  get userlist
 
 router.get('/userlist', ensureAuthenticated, function(req, res,){
-  var db = req.db;
-  var collection = db.get('usercollection');
-  collection.find({}, {}, function(e, docs){
+  User.find({}, {}, function(e, docs){
     res.render('userlist', {'userlist':docs})
   })
 });
