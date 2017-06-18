@@ -15,9 +15,7 @@ var mongo = require('mongodb');
 var mongoose= require('mongoose');
 var monk = require('monk');
 var db = mongoose.connect('mongodb://localhost/login');
-
-// var db = monk('mongodb://localhost/databaseApp');
-// var db1 = mongoose.connection;
+var db1 = monk('localhost:27017/persons');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -26,7 +24,7 @@ var app = express();
 
 // make database accessible to the router
 app.use(function(req, res, next){
-  req.db = db;
+  req.db1 = db1;
   next();
 })
 
