@@ -67,7 +67,6 @@ router.post('/register', function(req, res, next) {
     })
     User.createUser(newUser, function(err, user){
      if(err) throw err;
-       console.log(user);
     });
     req.flash('success_msg', 'You are registered and can now login');
     res.redirect('/login');
@@ -118,5 +117,43 @@ router.post('/login',
     req.flash('success_msg', 'You are logged out');
     res.redirect('/login');
   });
+  /*
+ * GET userlist.
+ */
+router.get('/userlists', function(req, res) {
+    var db1 = req.db1;
+    var collection = db1.get('userlist');
+    collection.find({},{},function(e,docs){
+        res.json(docs);
+    });
+});
+
+  /*
+   * POST to adduser.
+   */
+  router.post('/adduser', function(req, res) {
+      var db1 = req.db1;
+      var collection = db1.get('userlist');
+      collection.insert(req.body, function(err, result){
+          res.send(
+              (err === null) ? { msg: '' } : { msg: err }
+          );
+      });
+  });
+
+  /*
+   * DELETE to deleteuser.
+   */
+  router.delete('/deleteuser:id', function(req, res) {
+      var db1 = req.db1;
+      var collection = db1.get('userlist');
+      var userToDelete = req.params.id;
+      collection.remove({ '_id' : userToDelete }, function(err) {
+          res.send((err === null) ? { msg: '' } : { msg:'error: ' + err });
+      });
+  });
+
+
+
 
 module.exports = router;
