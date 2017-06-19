@@ -8,34 +8,34 @@ block content
 
         // USER INFO
         #userInfo
-            h2 User Info
+            h3(class='lang', key='User Info', underline='true') User Info
             p
-                strong Name:
+                strong(class='lang', key='Name') Name:
                 |  <span id='userInfoName'></span>
                 br
-                strong Age:
+                strong(class='lang', key='Age') Age:
                 |  <span id='userInfoAge'></span>
                 br
-                strong Gender:
+                strong(class='lang', key='Gender') Gender:
                 |  <span id='userInfoGender'></span>
                 br
-                strong Location:
+                strong(class='lang', key='Location') Location:
                 |  <span id='userInfoLocation'></span>
         // /USER INFO
 
         // USER LIST
-        h2 User List
+        h2(class='lang', key='User List') User List
         #userList
             table
                 thead
-                    th UserName
-                    th Email
-                    th Delete?
+                    th(class='lang', key='Username') UserName
+                    th(class='lang', key='Email') Email
+                    th(class='lang', key='Delete') Delete?
                 tbody 
         // /USER LIST
 
         // ADD USER
-        h2 Add User
+        h2(class='lang', key='Add User') Add User
         #addUser
             fieldset
                 input#inputUserName(type='text', placeholder='Username')
@@ -47,7 +47,7 @@ block content
                 input#inputUserLocation(type='text', placeholder='Location')
                 input#inputUserGender(type='text', placeholder='gender')
                 br
-                button#btnAddUser(class='btn btn-primary') Add User
+                button#btnAddUser(class='btn btn-primary lang', key='Add User') Add User
         // /ADD USER
 
     // /WRAPPER

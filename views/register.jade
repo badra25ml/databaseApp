@@ -8,21 +8,21 @@ block content
   #container.col
     form(method='POST', action='/register', class='form-first')
       .container
-        label
+        label(class='lang', key='Name')
           b Name
         input(type='text', class="form-control", placeholder='Name', name='name', required='')
-        label
+        label(class='lang', key='Username')
           b Username
         input(type='text', class="form-control", placeholder='Username', name='username', required='')
-        label
+        label(class='lang', key='Email')
           b Email
         input(type='text', class="form-control", placeholder='Email', name='email', required='')
-        label
+        label(class='lang', key='Password')
           b Password
         input(type='password', class="form-control", placeholder='Password', name='password', required='')
-        label
+        label(class='lang', key='Verify Password')
           b Verify Password
         input(type='password', class="form-control", placeholder='Confirm Password', name='password2', required='')
-        button.cancelbtn(type='button', class='', id='cl') Cancel
-        button(type='submit', class="btn btn-primary", id='register') Register
+        button.cancelbtn(type='button', class='lang', id='cl', key='Cancel') Cancel
+        button(type='submit', class="btn btn-primary lang", id='register', key='Register') Register
       
