@@ -65,7 +65,6 @@ nav.navbar {
   background-color: black;
   text-align: center;
   padding: 0px;
-  /*position: absolute;*/
   left: 0;
 }
 /*ul.nav.navbar-nav {
@@ -157,9 +156,16 @@ img.avatar {
   text-align: center;
 }
 #search {
-  width: 90px;
-  margin-left: 60%;
+  position:sticky;
+  width: 7%;
+  margin-left:45%;
+  margin-top: .8%;
   border-radius: 5%;
+  height: 30px;
+}
+::-webkit-input-placeholder {
+  font-size: .7em;
+  font-style: italic;
 }
 body {
   padding: 30px;

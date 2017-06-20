@@ -22,7 +22,7 @@ html
                 a(href='/home' class='lang' id='home' key='Home') Home
                 li
                 if user
-                  a(href='/userlist' class='lang' id='user' key='User List') User-list 
+                  a(href='/userlist' class='lang' id='user' key='User List') User list 
                 li
                 if !user 
                   a(href='/register' class='lang' id='reg' key='Register') Register
@@ -33,19 +33,20 @@ html
                 if user
                   a(href='/logout' class='lang' id='out' key='Logout') Logout
               if user
-               input(type='text' class='lang' placeholder='Search by username', id='search' key='Search')
+               input(type='text' class='lang' placeholder='Search', id='search' key='Search')
       #container
        if success_msg
          each msg, i in success_msg
-          .alert.alert-success #{success_msg}
+          .alert.alert-success(class='lang', key='alert-success') #{success_msg}
        if error_msg
          each msg, i in error_msg
-          .alert.alert-danger #{error_msg}
+          .alert.alert-danger(class='lang', key='alert-danger') #{error_msg}
         if error
           each msg, i in error
-           .alert.alert-danger #{error}
+           .alert.alert-danger(class='lang', key='danger') #{error}
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
     script(type='text/JavaScript', src='http://code.jquery.com/jquery-1.11.3.min.js')
+    script(type='text/JavaScript', src='/javascripts/arrLang.json')
     script(type='text/JavaScript', src='/javascripts/languages.js')
     script(type='text/JavaScript', src='/javascripts/global.js')
   block content
