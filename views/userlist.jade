@@ -31,21 +31,21 @@ block content
                     th(class='lang', key='Username') UserName
                     th(class='lang', key='Email') Email
                     th(class='lang', key='Delete') Delete?
-                tbody 
+                tbody
         // /USER LIST
 
         // ADD USER
         h2(class='lang', key='Add User') Add User
         #addUser
             fieldset
-                input#inputUserName(type='text', placeholder='Username')
-                input#inputUserEmail(type='text', placeholder='Email')
+                input#inputUserName(type='text', placeholder='Username', class='lang', key='Username')
+                input#inputUserEmail(type='text', placeholder='Email', class='lang', key='Email')
                 br
-                input#inputUserFullname(type='text', placeholder='Full Name')
-                input#inputUserAge(type='text', placeholder='Age')
+                input#inputUserFullname(type='text', placeholder='Full Name', class='lang', key='Full Name')
+                input#inputUserAge(type='text', placeholder='Age', class='lang', key='Age')
                 br
-                input#inputUserLocation(type='text', placeholder='Location')
-                input#inputUserGender(type='text', placeholder='gender')
+                input#inputUserLocation(type='text', placeholder='Location', class='lang', key='Location')
+                input#inputUserGender(type='text', placeholder='Gender', class='lang', key='Gender')
                 br
                 button#btnAddUser(class='btn btn-primary lang', key='Add User') Add User
         // /ADD USER
