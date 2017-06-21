@@ -11,7 +11,6 @@ var MYAPP = function (username, fullname, location, email, age, gender){
 
 // DOM Ready =============================================================
 $(document).ready(function() {
-
   // Populate the user table on initial page load
   populateTable();
   // Username link click
@@ -34,13 +33,24 @@ function populateTable() {
   $.getJSON( '/userlists', function(data) {
     // For each item in our JSON, add a table row and cells to the content string
     $.each(data, function(){
-      // Stick our user data array into a userlist variable in the global object
-      MYAPP = data;
-      tableContent += '<tr>';
-      tableContent += '<td><a href="#" class="linkshowuser" rel="' + this.username + '">' + this.username + '</a></td>';
-      tableContent += '<td>' + this.email + '</td>';
-      tableContent += '<td><a href="#" class="linkdeleteuser" key="delete" rel="' + this._id + '">delete</a></td>';
-      tableContent += '</tr>';
+      // setup page to remember the language before ejecting data
+      var language = Cookies('language');
+      if(language === 'en'){
+        // Stick our user data array into a userlist variable in the global object
+        MYAPP = data;
+        tableContent += '<tr>';
+        tableContent += '<td><a href="#" class="linkshowuser" rel="' + this.username + '">' + this.username + '</a></td>';
+        tableContent += '<td>' + this.email + '</td>';
+        tableContent += '<td><a href="#" class="linkdeleteuser lang" key="delete" rel="' + this._id + '">delete</a></td>';
+        tableContent += '</tr>';
+      }else{
+        MYAPP = data;
+        tableContent += '<tr>';
+        tableContent += '<td><a href="#" class="linkshowuser" rel="' + this.username + '">' + this.username + '</a></td>';
+        tableContent += '<td>' + this.email + '</td>';
+        tableContent += '<td><a href="#" class="linkdeleteuser lang" key="delete" rel="' + this._id + '">supprimer</a></td>';
+        tableContent += '</tr>';
+      }
     });
     // Inject the whole content string into our existing HTML table
     $('#userList table tbody').html(tableContent);
