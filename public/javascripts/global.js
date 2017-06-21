@@ -37,9 +37,9 @@ function populateTable() {
       // Stick our user data array into a userlist variable in the global object
       MYAPP = data;
       tableContent += '<tr>';
-      tableContent += '<td><a href="#" class="linkshowuser" rel=""' + this.username + '">' + this.username + '</a></td>';
+      tableContent += '<td><a href="#" class="linkshowuser" rel="' + this.username + '">' + this.username + '</a></td>';
       tableContent += '<td>' + this.email + '</td>';
-      tableContent += '<td><a href="#" class="linkdeleteuser"  key="delete" rel=""' + this._id + '">delete</a></td>';
+      tableContent += '<td><a href="#" class="linkdeleteuser" key="delete" rel="' + this._id + '">delete</a></td>';
       tableContent += '</tr>';
     });
     // Inject the whole content string into our existing HTML table
