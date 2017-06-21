@@ -1,10 +1,10 @@
 extends layout
 
 block content
-  h2 Registration Page
+  h3 Registration Page
     if errors
      each msg, i in errors
-      .alert.alert-danger #{errors[i].msg}
+      .alert.alert-danger(class='lang', key='#{errors[i].msg}') #{errors[i].msg}
   #container.col
     form(method='POST', action='/register', class='form-first')
       .container

@@ -36,13 +36,13 @@ html
       #container
        if success_msg
          each msg, i in success_msg
-          .alert.alert-success(class='lang', key='alert-success') #{success_msg}
+          .alert.alert-success(class='lang', key='#{success_msg}') #{success_msg}
        if error_msg
          each msg, i in error_msg
-          .alert.alert-danger(class='lang', key='alert-danger') #{error_msg}
+          .alert.alert-danger(class='lang', key='#{error_msg}') #{error_msg}
         if error
           each msg, i in error
-           .alert.alert-danger(class='lang', key='danger') #{error}
+           .alert.alert-danger(class='lang', key='#{error}') #{error}
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
     script(type='text/JavaScript', src='http://code.jquery.com/jquery-1.11.3.min.js')
     script(type='text/JavaScript', src="/javascripts/js.cookie.js")

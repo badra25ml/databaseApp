@@ -19,15 +19,21 @@ var arrLang = {"en":{
  "Cancel": "Cancel",
  "Registration Page": "Registration Page",
  "Password": "Password",
- "Verify Password": "Verify password",
+ "Verify password": "Verify password",
  "Register": "Register",
  "Language": "Language",
  "Enter Password": "Enter Password",
- "alert-danger": "You are not logged in, please login below to continue.",
- "alert-success": "You are registered and can now login.",
+ "You are not logged in, please login below to continue.": "You are not logged in, please login below to continue.",
+ "You are registered and can now login": "You are registered and can now login.",
  "delete": "delete",
 "Enter Username": "Enter username",
-"Confirm Password": "Confirm Password"
+"Are you sure you want to delete this user?": "Are you sure you want to delete this user?",
+"unknown user": "Unknown user",
+"Confirm Password": "Confirm Password",
+"Email is not valid": "Email is not valid",
+"Passwords do not match": "The passwords you entered do not match",
+"You are logged out": "You are logged out",
+"Invalid password": "Invalid password"
 },
 "fr": {
  "Home": "Acceuil",
@@ -53,10 +59,16 @@ var arrLang = {"en":{
  "Verify Password": "Verifier le mot de passe",
  "Language": "Langue",
  "Enter Password": "Votre mot de passe",
- "alert-danger": "Vous n'êtes enregistré, enregistrez-vous pour continuer.",
- "alert-success": "Vous n'êtes pas connecté, connectez-vous pour continuer.",
+ "You are registered and can now login": "Vous êtes enregistré, connectez-vous pour continuer.",
+ "You are not logged in, please login below to continue.": "Vous n'êtes pas connecté, connectez-vous pour continuer.",
  "delete": "supprimer",
  "Enter Username": "Nom d'utilisateur",
- "Confirm Password": "Vérifiez le mot de passe"
+ "Are you sure you want to delete this user?": "Voulez-vous vraiment supprimer cet utilisateur?",
+ "unknown user": "Utilisateur inconnu",
+ "Confirm Password": "Vérifiez le mot de passe",
+ "Email is not valid": "Email invalide",
+ "Passwords do not match": "Mots de passe différents",
+ "You are logged out": " Vous êtes deconnecté",
+ "Invalid password": "Mot de passe incorrect"
  }
 }
