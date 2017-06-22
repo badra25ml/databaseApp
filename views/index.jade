@@ -1,5 +1,31 @@
 extends layout
 
 block content
-  h1= title
+  #myCarousel.carousel.slide
+      ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        li(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+        li(data-target='#myCarousel', data-slide-to='3')
+        li(data-target='#myCarousel', data-slide-to='4')
+        li(data-target='#myCarousel', data-slide-to='5')
+      .carousel-inner
+        .item.active
+          img.img-responsive(src='./images/database0.jpg', alt='database')
+        .item
+          img.img-responsive(src='./images/database1.jpg', alt='database')
+        .item
+          img.img-responsive(src='./images/database2.jpg', alt='database0')
+        .item
+          img.img-responsive(src='./images/database3.jpg', alt='database0')
+        .item
+          img.img-responsive(src='./images/database4.jpg', alt='database0')
+        .item
+          img.img-responsive(src='./images/database5.jpg', alt='database0')
+      a.carousel-control.left(href='#myCarousel', data-slide='prev')
+      span(icon-prev='')
+      a.carousel-control.right(href='#myCarousel', data-slide='next')
+      span.icon-next
+        
+block content
   
