@@ -160,7 +160,7 @@ img.avatar {
   background-position: 6px 7px;
   background-repeat: no-repeat;
   position:sticky;
-  width: 8%;
+  width: 8.5%;
   margin-left:45%;
   margin-top: 1%;
   border-radius: 5%;
@@ -258,48 +258,4 @@ button#btnAddUser.btn.btn-primary {
    margin-left: 0%;
    margin-top: 0px;
    border-radius: 0;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 667px) {
-    btn-secondary {
-        width: 100%;
-    }
-nav.navbar {
-  display: inline-block;
-  width: 100%;
-  background-color: black;
-  text-align: center;
-  padding: 0px;
-  color: white;
-}
-#home {
-  margin-bottom: 5px;
-}
-#reg {
-  margin-bottom: 5px;
-}
-#log, #user, #out {
-  margin-bottom: 5px;
-}
-a {
-  color: white;
-}
-h2 {
-  color: white;
-  display: block;
-  text-align: center;
-  margin-top: 180px;
-}
-.form-first {
-        border: none;
-        display: inline-block;
-        margin-top: 50px;
-        width: 500px;
-        text-align: center;
-        background-color: rgb(191, 191, 191);
-  }
-
 }

@@ -40,7 +40,7 @@ var arrLang = {"en":{
  "Register": "S'enregistrer",
  "Login": "Se connecter",
  "Logout": "Se deconnecter",
- "Search": "Chercher",
+ "Search": "Rechercher",
  "User List": "Liste des utilisateurs",
  "User Info": "Information sur l'utilisateur",
  "Name": "Nom:",

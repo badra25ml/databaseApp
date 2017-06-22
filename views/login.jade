@@ -2,7 +2,7 @@ extends layout
 
 block content
   body
-    h2(class='lang', key='Login Page') Login Page
+    h2(class='lang lgntxt', key='Login Page') Login Page
     #container.col
       form(method='POST', action='/login', class='form-first')
         .imgcontainer
@@ -14,7 +14,7 @@ block content
           label(class='lang', key='Password')
             b Password
           input(type='password', class="form-control", placeholder='Enter Password', name='password', required='', class='lang', key='Enter Password')
-        .container(style='background-color:#f1f1f1')
+        .container(style='background-color:#f1f1f1' class='cllg')
           button.cancelbtn(type='button', class='btn btn-secondary', class='lang', key='Cancel') Cancel
           button(type='submit', class="btn btn-login", class='lang', key='Login') Login
           

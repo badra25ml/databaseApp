@@ -2,10 +2,12 @@ doctype html
 html
   head
     title= title
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='viewport', content='width=device-width,height=device-height,initial-scale=1.0')
+    link(rel='stylesheet', type='text/css', media='screen and (min-width: 320px) and (max-width: 568px)', href='/stylesheets/portrait.css')
+    link(rel='stylesheet', type='text/css', media='screen and (min-width: 568px) and (max-width: 667px)', href='/stylesheets/landscape.css')
     link(link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
     //- link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', type='text/css', media='screen and (min-width: 481px)', href='stylesheets/style.css')
     //- script(type='text/JavaScript', src='./i18n/js/jquery.i18n.properties.js')
     //- script(src='./FormHelpers/js/bootstrap-formhelpers-countries.js')
   body
@@ -19,7 +21,7 @@ html
                 select#sel 
                  option(value='en') English
                  option(value='fr') Francais
-                a(href='/home' class='lang' id='home' key='Home') Home
+                a(href='/home' class='lang hom' id='home' key='Home') Home
                 li
                 if user
                   a(href='/userlist' class='lang' id='user' key='User List') User list 
