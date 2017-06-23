@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h3 Registration Page
+  h3(class='registr') Registration Page
     if errors
      each msg, i in errors
       .alert.alert-danger(class='lang', key='#{errors[i].msg}') #{errors[i].msg}
