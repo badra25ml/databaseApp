@@ -1,10 +1,9 @@
 
 /* Change styles for span and cancel button on extra small screens */
 /* Add a hover effect for buttons */
-html{
-  /*background-color: rgb(51, 102, 153);*/
-}
-body {
+html body{
+  font-size: .7em;
+  font-weight: 900;
   position: relative;
   padding: 5px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -32,6 +31,9 @@ select#sel, .hom, #user, #reg, #log, #out, #search {
   color: white;
   font-weight: 900;
   font-size: 2.5vw;
+}
+ul.nav.navbar-nav {
+  display: inline-flex;
 }
 
 /* Center the avatar image inside this container */
@@ -93,7 +95,7 @@ input {
     width: 200px;
 }
 /* cancel button on login styling */
-.btn-secondary {
+/*.btn-secondary {
     width: 40%;
     color: white;
     padding: 10px 18px;
@@ -101,14 +103,16 @@ input {
     margin-right: 60%;
     margin-top: 5%;
     display: inline-block;
-}
+}*/
 /*login button styling*/
-.btn-login {
+button.btn.btn-login.lang {
+  font-weight: 900;
+  font-size: .5em;
   background-color: #4CAF50;
   color: white;
   padding: 5px 10px;
   margin-left: 60%;
-  margin-top: -55px;
+  margin-top: -40px;
   border: none;
   cursor: pointer;
   width: 40%;
@@ -135,27 +139,117 @@ div.container.cllg {
   text-align: center;
   color: white;
 }
-/*register button styling*/
-.btn-primary {
-  width: 40%;
-  background-color: rgb(51, 122, 183);
+
+/*cancel button on login page styling*/
+button.cancelbtn.btn.btn-secondary.lang {
+  font-weight: 900;
+  font-size: .5em;
   color: white;
-  padding: 7px 5px;
-  margin-left: 57%;
-  margin-top: -57px;
-  border-radius: 5px;
-  cursor: pointer;
+  width: 40%;
+  padding: 5px 10px;
+  background-color: #f44336;
+  margin-right: 60%;
   border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 /*cancel button on register page styling*/
-#cl {
+button#cl.cancelbtn.lang {
+  font-weight: 900;
+  font-size: .5em;
   color: white;
   width: 40%;
-  padding: 7px 5px;
+  padding: 5px 10px;
   background-color: #f44336;
   margin-right: 60%;
   margin-top: 10%;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+}
+/*register button on register page styling*/
+button#register.btn.btn-primary.lang {
+  font-weight: 900;
+  font-size: .5em;
+  color: white;
+  width: 40%;
+  padding: 5px 10px;
+  background-color: rgb(51, 122, 183);
+  margin-left: 57%;
+  margin-top: -42px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+input#search.lang {
+  font-size: .7em;
+  font-weight: 900;
+  position:absolute;
+  background-image: url(/images/search.png);
+  background-repeat: no-repeat;
+  width: 60px;
+  margin-left:15px;
+  margin-top: 18px;
+  border-radius: 5%;
+  height: 15px;
+}
+input {
+  text-align: center;
+}
+div#addUser {
+  font-size: .5em;
+  font-weight: 900;
+  width: 60%;
+  margin-left: 40px;
+}
+button#btnAddUser.btn.btn-primary.lang {
+  width: 100%;
+}
+div#userInfo {
+ background-color: white;
+ width: 45%;
+ margin-left: -38%;
+}
+h3.lang {
+  font-size: .7em;
+  font-weight: 900;
+
+}
+p.info {
+  font-size: .5em;
+  font-weight: 900;
+}
+h2.lang.userlist {
+  color: white;
+  margin-top: -100px;
+  margin-left: 70px;
+  font-size: 1em;
+  font-weight: 900;
+}
+h2.lang.adduser {
+  color: white;
+  margin-top: 20px;
+  margin-left: 90px;
+  font-size: 1em;
+  font-weight: 900;
+}
+div#userList {
+  color: black;
+  font-size: .4em;
+  font-weight: 900;
+  background-color: white;
+  width: 70%;
+  margin-left: 30px;
+
+}
+th.lang, td {
+  width: 40px;
+  text-align: center;
+}
+#addUser {
+  margin: auto;
+}
+div#wrapper {
+  display: inline-block;
+  margin-left: 10px;
 }
