@@ -7,14 +7,14 @@ var User = require('../models/users');
 
 /* GET home page. */
 router.get('/home', ensureAuthenticated,function(req, res, next) {
-  res.render('index', { title: 'Database app' });
+  res.render('index', { title: 'Home' });
 });
 
 //  get userlist
 
 router.get('/userlist', ensureAuthenticated, function(req, res,){
   User.find({}, {}, function(e, docs){
-    res.render('userlist', {'userlist':docs})
+    res.render('userlist',{title:'userlist'})
   })
 });
 
@@ -29,7 +29,7 @@ if(req.isAuthenticated()){
 
 // get registration page
 router.get('/register', function(req, res, next) {
-  res.render('register', { title: 'register' });
+  res.render('register', { title: 'Register' });
 });
 
 // get login page
@@ -68,7 +68,7 @@ router.post('/register', function(req, res, next) {
     User.createUser(newUser, function(err, user){
      if(err) throw err;
     });
-    req.flash('success_msg', 'You are registered and can now login');
+    req.flash('success_msg', 'You are registered and can now login.');
     res.redirect('/login');
   }
 });

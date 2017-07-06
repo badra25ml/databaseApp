@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title= title
+    title(class='lang', key='#{title}')= title
     meta(name='viewport', content='width=device-width,height=device-height,initial-scale=1.0')
     link(rel='stylesheet', type='text/css', media='screen and (min-width: 320px) and (max-width: 568px)', href='/stylesheets/portrait.css')
     link(rel='stylesheet', type='text/css', media='screen and (min-width: 568px) and (max-width: 667px)', href='/stylesheets/landscape.css')
@@ -24,7 +24,7 @@ html
                 a(href='/home' class='lang hom' id='home' key='Home') Home
                 li
                 if user
-                  a(href='/userlist' class='lang' id='user' key='User List') User list 
+                  a(href='/userlist' class='lang' id='user' key='User list') User list 
                 li
                 if !user 
                   a(href='/register' class='lang' id='reg' key='Register') Register
