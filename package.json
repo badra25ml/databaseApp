@@ -19,7 +19,7 @@
     "mongodb": "^2.2.36",
     "mongoose": "^4.13.19",
     "monk": "^6.0.6",
-    "morgan": "~1.8.1",
+    "morgan": "~1.9.1",
     "passport": "^0.3.2",
     "passport-http": "^0.3.0",
     "passport-local": "^1.0.0",
